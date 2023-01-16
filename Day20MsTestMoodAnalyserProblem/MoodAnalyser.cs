@@ -34,9 +34,9 @@ namespace Day20MsTestMoodAnalyserProblem
                     return "sad";
                 }
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Happy");
                 return default;
             }
         }
