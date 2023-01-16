@@ -8,8 +8,19 @@ namespace Day20MsTestMoodAnalyserProblem
 {
     public class MoodAnalyser
     {
+        //Default Constructor
+        public MoodAnalyser()
+        {
+
+        }
+        public string message;
+        //  constructor with Parameters
+        public MoodAnalyser(string message)
+        {
+            this.message = message;
+        }
         //AnalyseMood method
-        public string AnalyseMood(string message)
+        public string AnalyseMood()
         {
             //Try and Catch method
             try 

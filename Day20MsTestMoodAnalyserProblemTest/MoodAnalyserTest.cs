@@ -17,9 +17,9 @@ namespace Day20MsTestMoodAnalyserProblemTest
             {
                 //AAA methodology
                 //Arrange
-                MoodAnalyser moodAnalyser = new MoodAnalyser();
+                MoodAnalyser moodAnalyser = new MoodAnalyser(message);
                 //Act
-                string actual = moodAnalyser.AnalyseMood(message);
+                string actual = moodAnalyser.AnalyseMood();
                 //Assert
                 if (actual != null)
                     Assert.AreEqual(expected, actual);
