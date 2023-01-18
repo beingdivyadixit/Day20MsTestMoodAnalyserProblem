@@ -22,12 +22,16 @@ namespace Day20MsTestMoodAnalyserProblem
         //AnalyseMood method
         public string AnalyseMood()
         {
-            //Try and Catch method
-            try 
+            try
             {
                 if (message.ToLower().Contains("happy"))
                 {
                     return "happy";
+                }
+                else if (message.ToLower().Equals(string.Empty))
+                {
+                    Console.WriteLine(message);
+                    throw new CustomMoodAnalyserException("Message should not be empty", CustomMoodAnalyserException.ExceptionTypes.EMPTY_MESSAGE);
                 }
                 else
                 {
@@ -36,8 +40,7 @@ namespace Day20MsTestMoodAnalyserProblem
             }
             catch (NullReferenceException)
             {
-                Console.WriteLine("Happy");
-                return default;
+                throw new CustomMoodAnalyserException("Message should not be empty", CustomMoodAnalyserException.ExceptionTypes.EMPTY_MESSAGE);
             }
         }
     }
